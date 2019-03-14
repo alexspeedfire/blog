@@ -56,3 +56,12 @@ git push origin master
 
 # Возвращаемся обратно
 cd ..
+
+# Коммитим в основной репозитарий.
+git add .
+
+# Коммитим изменения.
+git commit -m "$Message"
+
+# Пушим их на гитхаб
+git push origin master
