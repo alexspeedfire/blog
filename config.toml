@@ -1,23 +1,86 @@
 baseurl = "https://alexspeedfire.github.io"
 title = "Рандомные куски кода."
-theme="material-design"
-languageCode = "en-RU"
-MetaDataFormat = "toml"
-paginate = 9 # To specify a multiple of 3
-disqusShortname = "" # optional
-copyright = "© 2019 Alex Speedfire"
+languageCode = "ru-ru"
+paginate = "10" # Number of posts per page
+theme = "binario"
+disqusShortname = "" # Enable comments by entering your Disqus shortname
+googleAnalytics = "" # Enable Google Analytics by entering your tracking id
+pygmentsCodefences = true
+pygmentsStyle = "native"
 
-[params]
-  description = "Найденные в закрытом периметре" # optional
-  twitter = "as_p" # optional
-  gitlab = "" # optional
-  github = "alexspeedfire" # optional
-  facebook = "" # optional
-  gplus = "" # optional
-  linkedin = "" # optional
-  #headerCover = "images/headerCover.png" # optional
-  #footerCover = "images/footerCover.png" # optional
-  googleAnalyticsUserID = "" # optional
+[Author] # Used in authorbox
+  name = "Alex Speedfire"
+  bio = "Booop!"
+  avatar = "img/avatar.png"
 
-[permalinks]
-  post = "/:year/:month/:day/:title/" # optional
+[Params]
+  description = "Рандомный код, который рождается в странной голове" # Site Description. Used in meta description
+  copyright = "Alex Speedfire" # Copyright holder, otherwise will use .Site.Title
+  opengraph = true # Enable OpenGraph if true
+  twitter_cards = true # Enable Twitter Cards if true
+  columns = 2 # Set the number of cards columns. Possible values: 1, 2, 3
+  mainSections = ["post"] # Set main page sections
+  post_meta = ["date", "categories"] # Enable post meta fields in given order
+  dateFormat = "January 02, 2006" # Change the format of dates
+  colorTheme = "dark-red" # dark-green, dark-blue, dark-red, dark-violet
+  customCSS = [""]#["css/custom.css"] # Include custom CSS files
+  mainMenuAlignment = "right" # Align main menu (desktop version) to the right side
+  authorbox = true # Show authorbox at bottom of single pages if true
+  toc = false # Enable Table of Contents for all site pages
+  tocOpen = true # Open Table of Contents block. Optional
+  comments = false # Enable comments for all site pages
+  related = true # Enable Related content for single pages
+  relatedMax = 5 # Set the maximum number of posts that can be displayed in related block. Optional
+  mathjax = true # Enable MathJax for all site pages
+  mathjaxPath = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" # Specify MathJax path. Optional
+  mathjaxConfig = "TeX-AMS-MML_HTMLorMML" # Specify MathJax config. Optional
+  hideNoPostsWarning = false # Don't show no posts empty state warning in main page, if true
+
+[Params.Social]
+  email = "alex.speedfire@gmail.com"
+  #facebook = "username"
+  twitter = "as_p"
+  telegram = "alexspeedfire"
+  instagram = "alexspeedfire"
+  #pinterest = "username"
+  vk = "alexspeedfire"
+  #linkedin = "username"
+  github = "alexspeedfire"
+  #gitlab = "username"
+  #stackoverflow = "numberid"
+  #mastodon = "username"
+  #medium = "username"
+
+[Params.Share] # Post Share block
+  facebook = true
+  twitter = true
+  reddit = true
+  telegram = true
+  linkedin = true
+  vk = true
+  pocket = true
+
+# Web App Manifest settings
+# https://www.w3.org/TR/appmanifest/
+# https://developers.google.com/web/fundamentals/web-app-manifest/
+[Params.Manifest]
+  name = "Random Code"
+  shortName = "RCode"
+  display = "browser"
+  backgroundColor = "#2a2a2a"
+  themeColor = "#1b1b1b"
+  description = "Рандомный код из рандомной головы."
+  orientation = "portrait"
+  startUrl = "/"
+  scope = "/"
+
+[outputFormats]
+  [outputFormats.MANIFEST]
+    mediaType = "application/json"
+    baseName = "manifest"
+    isPlainText = true
+    notAlternative = true
+
+[outputs]
+  home = ["HTML", "RSS", "MANIFEST"]
+  

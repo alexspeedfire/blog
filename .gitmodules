@@ -2,3 +2,6 @@
 	path = public
 	url = https://github.com/alexspeedfire/alexspeedfire.github.io.git
 	branch = master
+[submodule "themes/binario"]
+	path = themes/binario
+	url = https://github.com/vimux/binario
