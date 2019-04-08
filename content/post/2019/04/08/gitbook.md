@@ -71,12 +71,14 @@ draft: false
 12. 11.-mpls-l3vpn\README.md
 13. 13.-mpls-traffic-engineering\sposoby-napravleniya-trafika-v-te-tunnel.md
 
-Так же нужно ещё кое-что поправить в тексте статей (смотри [PR44](https://github.com/eucariot/SDSM/pull/44), если оно мерджнуто - значит не надо)
+Так же нужно ещё кое-что поправить в тексте статей (смотри [PR44](https://github.com/eucariot/SDSM/pull/44) и [PR45](https://github.com/eucariot/SDSM/pull/45), если оно мерджнуто - значит не надо)
 
-1. SDSM\1.-podklyuchenie-k-oborudovaniyu-cisco\4.-nastroika-dostupa.md, строка 69 - там кривая вставка, попытка вместо ссылки - картинку. Изменить ``![](http://ru.wikipedia.org/wiki/Протокол_AAA)ААА`` на ``[ААА](http://ru.wikipedia.org/wiki/Протокол_AAA)``
+1. 1.-podklyuchenie-k-oborudovaniyu-cisco\4.-nastroika-dostupa.md, строка 69 - там кривая вставка, попытка вместо ссылки - картинку. Изменить ``![](http://ru.wikipedia.org/wiki/Протокол_AAA)ААА`` на ``[ААА](http://ru.wikipedia.org/wiki/Протокол_AAA)``
+2. 15.-qos/3.-klassifikaciya-i-markirovka/0-behavior-aggregate.md, строка 48 - там не закрыт блок hint, так что я его тупо удалил.
 
 А теперь пробуем собрать книжку.
 
     gitbook epub ./ ./sdsm.epub
 
 С дцатого раза (спасибо тебе, мегафон, за качественный интернет) книжечка таки собралась и улетела в таком виде в библиотеку google play. Но насколько качественной получилась книжка, я скажу через пару недель =)
+Забрать её можно вот [отсюда](https://github.com/alexspeedfire/SDSM/releases/download/20190408/sdsm.epub)
